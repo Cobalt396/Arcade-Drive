@@ -36,8 +36,7 @@ public class Drive extends Subsystem {
 	public void arcadeDrive(double throttle, double rotation) {
 		final double epsilon = 0.0001;
 
-		double maxInput = Math.copySign(Math.max(Math.abs(throttle), Math.abs(rotation)),
-				throttle);
+		double maxInput = Math.copySign(Math.max(Math.abs(throttle), Math.abs(rotation)), throttle);
 
 		if (throttle * rotation >= 0.0) {
 			set(maxInput, throttle - rotation);
@@ -45,8 +44,5 @@ public class Drive extends Subsystem {
 			set(throttle + rotation, maxInput);
 		}
 
-		}
 	}
-
-
 }
