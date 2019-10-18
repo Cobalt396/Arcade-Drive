@@ -24,13 +24,12 @@ public class Drive extends Subsystem {
 	}
 
 	public void set(double v) {
-		rf_motor.set(ControlMode.PercentOutput, v);
-		lf_motor.set(ControlMode.PercentOutput, v);
+		set(v, v);
 	}
 
 	public void set(double l_v, double r_v) {
 		rf_motor.set(ControlMode.PercentOutput, Math.max(-1, Math.min(1, r_v)));
-		lf_motor.set(ControlMode.PercentOutput, l_v);
+		lf_motor.set(ControlMode.PercentOutput, Math.max(-1, Math.min(1, l_v)));
 	}
 
 	public void arcadeDrive(double throttle, double rotation) {
