@@ -8,6 +8,9 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.ButtonPress;
 
 /**
  * This class is the glue that binds the controls on the physical operator interface to the commands
@@ -15,6 +18,11 @@ import edu.wpi.first.wpilibj.Joystick;
  */
 public class OI {
 	Joystick attack3 = new Joystick(1);
+	Button button1 = new JoystickButton(attack3, 2);
+
+	public OI() {
+		button1.whenPressed(new ButtonPress());
+	}
 
 	public double getForward() {
 		return attack3.getRawAxis(1);
