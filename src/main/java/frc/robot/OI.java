@@ -17,7 +17,7 @@ import frc.robot.commands.ButtonPress;
  * and command groups that allow control of the robot.
  */
 public class OI {
-	Joystick attack3 = new Joystick(1);
+	Joystick attack3 = new Joystick(0);
 	Button button1 = new JoystickButton(attack3, 2);
 
 	public OI() {

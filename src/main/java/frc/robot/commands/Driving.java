@@ -5,6 +5,10 @@ import frc.robot.Robot;
 
 public class Driving extends Command {
 
+	public Driving() {
+		requires(Robot.move_sub);
+	}
+
 	@Override
 	protected boolean isFinished() {
 		// TODO Auto-generated method stub

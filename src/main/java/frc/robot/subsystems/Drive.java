@@ -3,12 +3,14 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.commands.Driving;
 
 public class Drive extends Subsystem {
 
 	@Override
 	protected void initDefaultCommand() {
 		// TODO Auto-generated method stub
+		setDefaultCommand(new Driving());
 
 	}
 

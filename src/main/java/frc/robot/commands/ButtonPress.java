@@ -7,6 +7,7 @@ public class ButtonPress extends Command {
 
 	public ButtonPress() {
 		setTimeout(2);
+		requires(Robot.move_sub);
 	}
 
 	@Override
